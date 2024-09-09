@@ -1,0 +1,540 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #FFF;
+    z-index: 1;
+  }
+  
+  .pinterest {
+    width: 25px;
+  }
+  
+  header button {
+    width: 65px;
+    background-color: white;
+    border-color: white;
+    border-style: none;
+    font-size: 16px;
+    flex-shrink: 0; 
+  }
+  
+  .header-button {
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 15px 5px 15px 5px;
+  }
+  
+  .header-button.active {
+    background-color: black;
+    color: white;
+  }
+  
+  .botones {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-shrink: 0; 
+  }
+  
+  .boton-2 {
+    width: 90px;
+  }
+
+  header input {
+    width: 65.2%;
+    height: 45px;
+    border-radius: 50px;
+    background-color: rgb(241, 241, 241);
+    border: none;
+    position: relative;
+    left: 0px;
+    padding-left: 45px;
+    font-size: 15px;
+    margin-right: 8px;
+  }
+  
+  header input:focus {
+    border: 4px solid rgb(127, 193, 255);
+    outline: none;
+  }
+  
+  header input:hover {
+    background-color: rgb(228, 228, 228);
+  }
+  
+  .icon-busqueda {
+    position: absolute;
+    left: 312px;
+    width: 18px;
+    color: rgb(123, 121, 121);
+  }
+  
+  .icons {
+    font-size: 22px;
+    width: 25px;
+    color: rgb(123, 121, 121);
+  }
+  
+  header .iconos {
+    position: relative;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    flex: 1;
+    margin-right: 25px;
+  }
+  
+  .tamaño-iconos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 47px;
+    height: 48px;
+  }
+  
+  .tamaño-iconos-ultimo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    height: 23px;
+  }
+  
+  .tamaño-iconos:hover {
+    background-color: rgb(228, 228, 228);
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  .tamaño-iconos-ultimo:hover {
+    background-color: rgb(228, 228, 228);
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .circulo {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(2, 131, 201); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF; 
+    font-size: 14px;    
+  }
+  
+  .abajo {
+    width: 24px;
+    color: rgb(123, 121, 121);;
+  }
+  
+  .campanita {
+    display: none;
+    position: absolute;
+    top: 160px;
+    right: 35px;
+    width: 380px;
+    height: 470px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+  
+  .campanita.active {
+    display: block;
+  }
+
+ .campanita.focused {
+  box-shadow: 0 0 0 4px rgb(127, 193, 255); 
+ }
+
+ .mensaje-menu{
+    position: absolute;
+    top: 70px;
+    right: 35px;
+    width: 380px;
+    height: 664px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 15px;
+ }
+
+ .disabled {
+  pointer-events: none;
+}
+
+ .actualizaciones.focused {
+  box-shadow: 0 0 0 4px rgb(127, 193, 255); 
+}
+
+.cuadro-abajo.focused {
+  box-shadow: 0 0 0 4px rgb(127, 193, 255); 
+}
+
+.mensaje-menu.focused {
+  box-shadow: 0 0 0 4px rgb(127, 193, 255); 
+}
+
+hr{
+  position: absolute;
+  top: 71px;
+  width: 98.8%;
+  border: 3px solid white;
+}
+
+.raya-cuadro{
+  position: absolute;
+  top: -13px;
+  width: 98.8%;
+  border: 3px solid white;
+}
+  
+  .actualizaciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: #FFF;
+    position: fixed;
+    top: 80px;
+    width: 380px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .cuadro-abajo{
+    width: 380px;
+    height: 100px;
+    background-color: #FFF;
+    position: fixed;
+    top: 635px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .pin-2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px; 
+    padding-top: 7px;
+    padding-left: 7px;
+    cursor: pointer;
+    width: 95%;
+    margin-left: 8px;
+    position: relative;
+  }
+
+  .pin-2 img{
+    width: 55px;
+    height: 73px;
+    border-radius: 10px;
+    
+  }
+
+  .pin-2 p{
+    font-size: 16px;
+    color: rgb(67, 65, 65);
+    width: 60%;
+  }
+
+  .pin-2:hover{
+    background-color: rgb(228, 228, 228);
+    border-radius: 13px;
+  }
+
+.pin-2:hover .icon-container {
+    display: block;
+  }
+
+  .icon-container {
+    display: none;
+    position: absolute;
+    top: 48px; /* Ajusta según tu diseño */
+    right: 20px; /* Ajusta según tu diseño */
+  }
+
+  .tres-puntos-2{
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+  }
+  
+  .tres-puntos-2:hover {
+    background-color: black;
+    color: #FFF;
+  }
+
+  .mensaje-contenidos{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 10px;
+
+  }
+
+  .mensaje-contenidos p{
+    font-size: 22px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  }
+
+  .mensaje-contenidos div{
+    margin-left: auto;
+  }
+
+  .fax{
+    font-size: 29px;
+    padding: 8px 11px;
+    cursor: pointer;
+  }
+
+  .fax:hover{
+    background-color: rgb(228, 228, 228);
+    border-radius: 50%;
+  }
+
+  .tres-puntos-tres{
+    font-size: 23px;
+    padding: 10px 11px;
+    cursor: pointer;
+  }
+
+  .tres-puntos-tres:hover{
+    background-color: rgb(228, 228, 228);
+    border-radius: 50%;
+  }
+
+  .escribir{
+    font-size: 23px;
+    color: #FFF;
+    padding: 13px;
+    border-radius: 50px;
+    background-color: rgb(230,1,36);
+  }
+
+  .add{
+    font-size: 20px;
+    color: black;
+    padding: 15px 13px;
+    border-radius: 50px;
+    background-color: rgb(218, 212, 212);
+  }
+
+  .mensajes-enviar{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 93%;
+    height: 70px;
+    padding-left: 15px;
+    margin-left: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+
+  .mensajes-enviar p{
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+  }
+
+  .p-chatear{
+    color: rgb(142, 139, 139);
+    font-size: 17;
+  }
+
+  .mensajes-enviar:hover{
+    background-color: rgb(239, 237, 237);
+    
+  }
+
+  .pin-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(234px, 1fr));
+    gap: 16px;
+    margin-top: 85px;
+    margin-left: 8px;
+    margin-right: 8px;
+    display: flex;
+  }
+  
+  .pin {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .pin img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .pin p {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .pin-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .pin:hover .pin-overlay {
+    opacity: 1;
+  }
+  
+  .pin-overlay a {
+    margin: 5px 0;
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .pin-overlay button {
+    
+    padding: 13px 10px;
+    background: rgb(230,0,35);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .cabeza-img{
+    display: flex;
+    gap: 50px;
+    margin-top: 10px;
+  }
+
+  .iconos-img {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .tres-puntos{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .descarga{
+    transform: rotate(270deg);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+  }
+
+  .pin-overlay .icon {
+    margin: 5px 0;
+    font-size: 24px;
+  }
+
+
+  .explore-page, .crear-page{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+  }
+
+  .explore-page h1, .crear-page h1{
+    color: black;
+  }
+
+
+  @media (max-width: 800px) {
+    .boton-2, .boton-3 {
+      display: none;
+    }
+   .menu-botones {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 70px; 
+      left: 20px; 
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+      padding: 5px;
+    }
+  
+    .menu-botones div{
+      font-size: 15px;
+      height: 30px;
+      width: 130px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 3px 10px;
+    }
+  
+    .menu-botones div:hover{
+      background-color: #ccc;
+      border-radius: 10px;
+    }
+  
+    .icon-busqueda{
+      left: 157px;
+    }
+  
+  }
+  
+  
+  @media (min-width: 800px) {
+   .menu-botones {
+      display: none;
+    }
+  }
+  
+
+
